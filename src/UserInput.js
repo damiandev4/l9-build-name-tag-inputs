@@ -5,17 +5,18 @@ class UserInput extends Component {
         name: "",
     };
 
-    updateName = (e) => this.setState({ name: e.target.value });
-    handleSubmit = (e) => { 
-        e.preventDefault(); 
+    updateName = (event) => this.setState({ name: event.target.value });
+    handleSubmit = (event) => { 
+        event.preventDefault(); 
+        this.props.addName(this.state.name);
         this.setState({ name: "" });
     };
 
     render () {
         return (
-            <form onSubmit = {this.handleSubmit}>
+            <form onSubmit = {this.handleSubmit} className="name-input-form">
                 <div className="name-submit">
-                    <label for="name" class="input-label">Add a new name</label>
+                    <label htmlFor= "name" className="input-label">Add a new name</label>
                     <input 
                         type="text" 
                         id="name" 
@@ -29,4 +30,5 @@ class UserInput extends Component {
         );
     }
 }
-export default UserInput
+
+export default UserInput;
