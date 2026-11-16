@@ -16,7 +16,7 @@ class UserInput extends Component {
         return (
             <form onSubmit = {this.handleSubmit} className="name-input-form">
                 <div className="name-submit">
-                    <label htmlFor= "name" className="input-label">Add a new name</label>
+                    <label htmlFor="name" className="input-label">Add a new name</label>
                     <input 
                         type="text" 
                         id="name" 
